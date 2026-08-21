@@ -1,0 +1,247 @@
+/* ============================================================
+   YAK & SPICE — Himalayan Kitchen
+   Design tokens
+   ============================================================ */
+:root {
+  --maroon: #7A0C12;
+  --maroon-ink: #430509;
+  --gold: #B5813E;
+  --gold-soft: #D9B77E;
+  --cream: #F7F1E3;
+  --cream-dim: #EFE6D2;
+  --ink: #2B2320;
+  --stone: #6E645C;
+  --green: #4B6B3B;
+
+  --display: "Cormorant Garamond", "Georgia", serif;
+  --body: "EB Garamond", "Georgia", serif;
+
+  --max: 1120px;
+  --edge: clamp(20px, 5vw, 64px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.eyebrow {
+  font-family: var(--body);
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  color: var(--maroon);
+  margin: 0;
+  font-weight: 700;
+}
+
+h2 { font-size: clamp(32px, 4.4vw, 48px); letter-spacing: 0.01em; }
+h3 { font-size: clamp(22px, 2.6vw, 26px); }
+
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(56px, 9vw, 104px) var(--edge);
+}
+
+.section-head { text-align: center; margin-bottom: clamp(32px, 5vw, 56px); }
+.section-head .eyebrow { display: block; margin-bottom: 10px; }
+.section-head p.lede {
+  max-width: 620px; margin: 16px auto 0; color: var(--stone); font-size: 19px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 2px;
+  font-family: var(--body);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.btn-primary { background: var(--gold); color: var(--maroon-ink); font-weight: 600; }
+.btn-primary:hover { background: var(--gold-soft); transform: translateY(-2px); }
+.btn-ghost { border-color: rgba(247,241,227,0.55); color: var(--cream); }
+.btn-ghost:hover { background: rgba(247,241,227,0.12); transform: translateY(-2px); }
+.btn-outline { border-color: var(--maroon); color: var(--maroon); }
+.btn-outline:hover { background: var(--maroon); color: var(--cream); transform: translateY(-2px); }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(247,241,227,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(122,12,18,0.12);
+}
+.nav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 14px var(--edge);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img { height: 38px; width: 38px; border-radius: 50%; }
+.brand-word { font-family: var(--display); font-weight: 700; color: var(--maroon); font-size: 21px; letter-spacing: 0.02em; }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a {
+  text-decoration: none; color: var(--ink); font-size: 15px; letter-spacing: 0.04em;
+  text-transform: uppercase; padding: 4px 0; border-bottom: 1px solid transparent;
+}
+.nav-links a:hover { border-color: var(--gold); }
+.nav-links a.current { color: var(--maroon); border-color: var(--maroon); }
+.nav-cta {
+  padding: 9px 20px; background: var(--maroon); color: var(--cream);
+  text-transform: uppercase; font-size: 13px; letter-spacing: 0.06em; text-decoration: none; border-radius: 2px;
+}
+.nav-cta:hover { background: var(--maroon-ink); }
+.nav-toggle { display: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background: radial-gradient(120% 140% at 50% -10%, var(--maroon) 0%, var(--maroon-ink) 78%);
+  color: var(--cream);
+  text-align: center;
+  padding: clamp(70px, 12vw, 130px) var(--edge) 0;
+  overflow: hidden;
+}
+.hero-crest { width: 92px; height: 92px; margin: 0 auto 26px; border-radius: 50%; border: 2px solid var(--gold); padding: 6px; }
+.hero .eyebrow { color: var(--gold-soft); }
+.hero h1 {
+  font-family: var(--display); color: var(--cream);
+  font-size: clamp(48px, 9vw, 96px); line-height: 0.98; letter-spacing: 0.01em;
+  margin: 14px 0 6px;
+}
+.hero h1 span { color: var(--gold-soft); }
+.hero .subtitle {
+  font-size: 15px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 22px;
+}
+.hero p.lede { max-width: 520px; margin: 0 auto 34px; color: rgba(247,241,227,0.86); font-size: 19px; }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+
+.ridge { display: block; width: 100%; height: auto; }
+.ridge-gold path { fill: var(--gold); }
+.ridge-cream path { fill: var(--cream); }
+.ridge-maroon path { fill: var(--maroon); }
+
+/* Prayer-flag bunting: single, specific signature detail */
+.bunting { display: flex; justify-content: center; background: var(--cream); padding: 0; overflow: hidden; }
+.bunting-row { display: flex; }
+.flag {
+  width: 34px; height: 44px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  margin: 0 3px;
+  flex-shrink: 0;
+  transform: translateY(-2px);
+  animation: flutter 4.5s ease-in-out infinite;
+}
+.flag:nth-child(5n+1) { background: #2E5C8A; animation-delay: 0s; }
+.flag:nth-child(5n+2) { background: #F4F1EA; animation-delay: 0.3s; }
+.flag:nth-child(5n+3) { background: var(--maroon); animation-delay: 0.6s; }
+.flag:nth-child(5n+4) { background: var(--green); animation-delay: 0.9s; }
+.flag:nth-child(5n+5) { background: #D9A63E; animation-delay: 1.2s; }
+@keyframes flutter { 0%,100% { transform: translateY(-2px) rotate(0deg); } 50% { transform: translateY(2px) rotate(1.2deg); } }
+
+/* ---------- About ---------- */
+.about { display: flex; flex-wrap: wrap; gap: clamp(30px, 6vw, 72px); align-items: center; }
+.about-copy { flex: 1 1 480px; }
+.about-copy p { color: var(--ink); font-size: 19px; margin: 0 0 16px; }
+.about-copy p:last-child { margin-bottom: 0; }
+.about-art { display: flex; align-items: center; justify-content: center; position: relative; flex: 1 1 220px; }
+.about-art img { width: 220px; opacity: 0.95; }
+.stat-row { display: flex; gap: 36px; margin-top: 30px; flex-wrap: wrap; }
+.stat { margin-right: 36px; }
+.stat:last-child { margin-right: 0; }
+.stat b { display: block; font-family: var(--display); color: var(--maroon); font-size: 30px; }
+.stat span { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); }
+
+/* ---------- Signature dishes ---------- */
+.dish-grid { display: flex; flex-wrap: wrap; gap: 28px; }
+.dish-card { flex: 1 1 calc(33.333% - 19px); min-width: 240px; }
+.dish-card {
+  background: #fff; border: 1px solid rgba(122,12,18,0.1);
+  padding: 30px 26px; text-align: center; border-radius: 3px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.dish-card:hover { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(43,35,32,0.12); }
+.dish-card img { width: 44px; height: 44px; margin: 0 auto 16px; }
+.dish-card h3 { margin-bottom: 6px; }
+.dish-card .price { color: var(--maroon); font-weight: 700; font-family: var(--display); font-size: 21px; display: block; margin-bottom: 10px; }
+.dish-card p { color: var(--stone); font-size: 16px; margin: 0; font-style: italic; }
+.dish-cta { text-align: center; margin-top: 44px; }
+
+/* ---------- Visit ---------- */
+.visit { background: var(--cream-dim); }
+.visit-grid { display: flex; flex-wrap: wrap; gap: clamp(30px, 6vw, 72px); }
+.visit-block { flex: 1 1 320px; }
+.visit-block h3 { margin-bottom: 14px; }
+.visit-line { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+.visit-line .k { min-width: 84px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12.5px; color: var(--gold); font-weight: 600; padding-top: 3px; }
+.visit-line .v { color: var(--ink); font-size: 17px; }
+.visit-line .v a { text-decoration: none; border-bottom: 1px solid var(--gold); }
+.hours-table { width: 100%; border-collapse: collapse; }
+.hours-table td { padding: 7px 0; font-size: 16px; border-bottom: 1px dotted rgba(122,12,18,0.15); }
+.hours-table td:last-child { text-align: right; color: var(--stone); }
+.map-cta { margin-top: 22px; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--maroon-ink); color: rgba(247,241,227,0.82); }
+.footer-inner {
+  max-width: var(--max); margin: 0 auto; padding: 50px var(--edge) 30px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;
+}
+.footer-brand { display: flex; align-items: center; gap: 12px; }
+.footer-brand img { height: 42px; width: 42px; border-radius: 50%; }
+.footer-brand-word { font-family: var(--display); color: var(--cream); font-size: 20px; }
+.footer-brand-tag { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-soft); }
+.footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+.footer-col a, .footer-col div { display: block; color: rgba(247,241,227,0.78); text-decoration: none; font-size: 15px; margin-bottom: 8px; }
+.footer-col a:hover { color: var(--gold-soft); }
+.footer-col h4 { color: var(--gold-soft); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 12px; font-family: var(--body); }
+.footer-bottom {
+  border-top: 1px solid rgba(247,241,227,0.12); text-align: center; padding: 18px var(--edge) 28px;
+  font-size: 13px; color: rgba(247,241,227,0.55);
+}
+
+/* ---------- Reveal-on-scroll (progressive enhancement: visible by default) ---------- */
+.reveal { opacity: 1; transform: none; }
+html.has-js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+html.has-js .reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .about-art { order: -1; }
+  .dish-card { flex: 1 1 calc(50% - 14px); }
+  .nav-links { display: none; }
+}
+@media (max-width: 560px) {
+  .dish-card { flex: 1 1 100%; }
+  .hero h1 { font-size: 15vw; }
+  .stat-row { gap: 24px; }
+}
