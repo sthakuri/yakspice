@@ -5,8 +5,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yak & Spice — Himalayan Kitchen, Oakland</title>
-<meta name="description" content="Yak & Spice is a Himalayan kitchen on Piedmont Avenue in Oakland, CA — hand-folded momo, tandoor classics, and slow-cooked curries from Nepal and across the Himalaya.">
+<meta name="description" content="Yak & Spice is a Himalayan kitchen on Piedmont Avenue in Oakland, CA — hand-folded momo, tandoor classics, and slow-cooked curries. Open 7 days, 11 AM – 9:30 PM. Order online for pickup.">
+<link rel="canonical" href="https://yakspice.com/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Yak & Spice — Himalayan Kitchen, Oakland">
+<meta property="og:description" content="Momo, tandoor, and slow-simmered curry on Piedmont Avenue. Open 7 days, 11 AM – 9:30 PM.">
+<meta property="og:url" content="https://yakspice.com/">
+<meta property="og:image" content="https://yakspice.com/assets/logo.png">
 <link rel="icon" href="assets/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Yak & Spice Himalayan Kitchen",
+  "url": "https://yakspice.com/",
+  "logo": "https://yakspice.com/assets/logo.png",
+  "image": "https://yakspice.com/assets/logo.png",
+  "telephone": "+1-510-844-4535",
+  "email": "mallaspice@gmail.com",
+  "servesCuisine": ["Nepalese", "Himalayan", "Indian"],
+  "priceRange": "$$",
+  "menu": "https://yakspice.com/menu.html",
+  "acceptsReservations": false,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4086 Piedmont Ave",
+    "addressLocality": "Oakland",
+    "addressRegion": "CA",
+    "postalCode": "94611",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "11:00",
+    "closes": "21:30"
+  }],
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": "https://yak-and-spice-oakland.cloveronline.com/"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -26,7 +66,10 @@
       <a href="menu.html">Full Menu</a>
       <a href="index.html#visit">Visit</a>
     </div>
-    <a class="nav-cta" href="index.html#visit">Directions</a>
+    <div class="nav-actions">
+      <a class="nav-call" href="tel:+15108444535" aria-label="Call (510) 844-4535">Call</a>
+      <a class="nav-cta" href="https://yak-and-spice-oakland.cloveronline.com/" target="_blank" rel="noopener">Order Online</a>
+    </div>
   </div>
 </nav>
 
@@ -37,9 +80,15 @@
   <div class="subtitle">Himalayan Kitchen</div>
   <p class="lede">Momo, tandoor, and slow-simmered curry — carried down from Nepal and the wider Himalaya to Piedmont Avenue.</p>
   <div class="hero-ctas">
-    <a class="btn btn-primary" href="menu.html">View the Menu</a>
-    <a class="btn btn-ghost" href="#visit">Get Directions</a>
+    <a class="btn btn-primary" href="https://yak-and-spice-oakland.cloveronline.com/" target="_blank" rel="noopener">Order Online</a>
+    <a class="btn btn-ghost" href="menu.html">View the Menu</a>
+    <a class="btn btn-ghost" href="tel:+15108444535">Call (510) 844-4535</a>
   </div>
+  <ul class="hero-facts">
+    <li>Open 7 days · 11:00 AM – 9:30 PM</li>
+    <li>Daily lunch special · 11:30 AM – 2:00 PM</li>
+    <li>Halal meat · GMO free</li>
+  </ul>
 
   <svg class="ridge ridge-cream" viewBox="0 0 1200 90" preserveAspectRatio="none">
     <path d="M0,90 L0,58 L80,22 L150,50 L230,10 L300,42 L380,18 L460,54 L540,26 L610,48 L690,6 L760,44 L840,20 L920,52 L1000,16 L1080,46 L1150,24 L1200,50 L1200,90 Z"/>
@@ -135,7 +184,9 @@
       <div class="visit-line"><span class="k">Email</span><span class="v"><a href="mailto:mallaspice@gmail.com">mallaspice@gmail.com</a></span></div>
       <div class="map-cta">
         <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=4086+Piedmont+Ave+Oakland+CA+94611" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn-outline" href="https://yak-and-spice-oakland.cloveronline.com/" target="_blank" rel="noopener">Order Online</a>
       </div>
+      <iframe class="map-embed" title="Map to Yak &amp; Spice, 4086 Piedmont Ave, Oakland" src="https://maps.google.com/maps?q=4086+Piedmont+Ave,+Oakland,+CA+94611&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="visit-block reveal">
       <h3>Hours</h3>
@@ -143,6 +194,14 @@
         <tr><td>Open 7 Days a Week</td><td>11:00 AM – 9:30 PM</td></tr>
         <tr><td>Daily Lunch Special</td><td>11:30 AM – 2:00 PM</td></tr>
       </table>
+      <h3 style="margin-top:34px;">Good to Know</h3>
+      <ul class="visit-notes">
+        <li>We only use halal meat, and our restaurant is GMO free.</li>
+        <li>Spice levels can be made mild, medium, or hot on request.</li>
+        <li>Plenty of vegetarian and vegan dishes — look for the marks on our <a href="menu.html">menu</a>.</li>
+        <li>Please tell our staff about any food allergies before ordering.</li>
+        <li>A 20% gratuity is added for parties of 6 or more.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -162,6 +221,13 @@
         <a href="index.html#about">About</a>
         <a href="menu.html">Full Menu</a>
         <a href="index.html#visit">Visit</a>
+        <a href="https://yak-and-spice-oakland.cloveronline.com/" target="_blank" rel="noopener">Order Online</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <div>Open 7 days a week</div>
+        <div>11:00 AM – 9:30 PM</div>
+        <div>Lunch special 11:30 AM – 2:00 PM</div>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>

@@ -119,6 +119,12 @@ h3 { font-size: clamp(22px, 2.6vw, 26px); }
   text-transform: uppercase; font-size: 13px; letter-spacing: 0.06em; text-decoration: none; border-radius: 2px;
 }
 .nav-cta:hover { background: var(--maroon-ink); }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-call {
+  padding: 8px 16px; border: 1px solid var(--maroon); color: var(--maroon);
+  text-transform: uppercase; font-size: 13px; letter-spacing: 0.06em; text-decoration: none; border-radius: 2px;
+}
+.nav-call:hover { background: rgba(122,12,18,0.08); }
 .nav-toggle { display: none; }
 
 /* ---------- Hero ---------- */
@@ -143,7 +149,11 @@ h3 { font-size: clamp(22px, 2.6vw, 26px); }
   margin-bottom: 22px;
 }
 .hero p.lede { max-width: 520px; margin: 0 auto 34px; color: rgba(247,241,227,0.86); font-size: 19px; }
-.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.hero-facts {
+  list-style: none; padding: 0; margin: 0 auto 56px; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 8px 28px; font-size: 15px; letter-spacing: 0.03em; color: var(--gold-soft);
+}
 
 .ridge { display: block; width: 100%; height: auto; }
 .ridge-gold path { fill: var(--gold); }
@@ -208,7 +218,10 @@ h3 { font-size: clamp(22px, 2.6vw, 26px); }
 .hours-table { width: 100%; border-collapse: collapse; }
 .hours-table td { padding: 7px 0; font-size: 16px; border-bottom: 1px dotted rgba(122,12,18,0.15); }
 .hours-table td:last-child { text-align: right; color: var(--stone); }
-.map-cta { margin-top: 22px; }
+.map-cta { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
+.map-embed { display: block; width: 100%; height: 260px; border: 0; margin-top: 24px; border-radius: 2px; }
+.visit-notes { padding-left: 20px; margin: 0; color: var(--stone); font-size: 16px; line-height: 1.75; }
+.visit-notes a { color: var(--maroon); }
 
 /* ---------- Footer ---------- */
 footer { background: var(--maroon-ink); color: rgba(247,241,227,0.82); }
@@ -239,6 +252,9 @@ html.has-js .reveal.in { opacity: 1; transform: translateY(0); }
   .about-art { order: -1; }
   .dish-card { flex: 1 1 calc(50% - 14px); }
   .nav-links { display: none; }
+}
+@media (max-width: 420px) {
+  .brand-word { display: none; }
 }
 @media (max-width: 560px) {
   .dish-card { flex: 1 1 100%; }
